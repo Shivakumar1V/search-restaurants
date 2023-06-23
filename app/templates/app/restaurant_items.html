@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Restaurant Menu</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+    <style>
+        body {
+            background-color: #2ef9f9;
+            background-image: linear-gradient(90deg, #38e7ff 0%, #3571ba 50%, #d250f7 100%);
+        }
+
+        .underline {
+            text-decoration: underline;
+            text-underline-offset: 0.5rem;
+        }
+
+        .items {
+            width: 50rem;
+        }
+
+        @media screen and (max-width:665px) {
+            .items {
+                width: auto;
+            }
+
+            body {
+                padding: 0 0.5rem;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <h1 class="text-center underline mt-4">Restaurant Items</h1>
+
+    {% if context %}
+    <div class="items mx-auto my-4">
+        <table class="table">
+            <thead>
+                <tr>
+                    <th scope="col">Item Name</th>
+                    <th scope="col">Price in Rs.</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for key, value in context.items %}
+                <tr>
+                    <td>{{key}}</td>
+                    <td>{{value}}</td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </div>
+    {% else %}
+    <h2 class="text-center">Not Available</h2>
+    {% endif %}
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>
