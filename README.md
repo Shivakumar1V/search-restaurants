@@ -31,11 +31,11 @@ Now the application is ready to use
 Open your browser and go to **[http://127.0.0.1:8000/](http://127.0.0.1:8000/)** 
 ## Screenshots
 
-![img1](screenshots/Screenshot1.png) 
+![img1](/screenshots/Screenshot1.png) 
 
-![img2](screenshots/Screenshot2.png) 
+![img2](/screenshots/Screenshot2.png) 
 
-![img3](screenshots/Screenshot3.png) 
+![img3](/screenshots/Screenshot3.png) 
 
 
 
